@@ -45,6 +45,8 @@ router.post('/punchin',async (req, res,next)=> {
                     punchdate:nextday,
                     punchin:time,
                     shift:getShift,
+                    primarySkill:getUserData.primarySkill,
+                    primaryActivity:getUserData.primaryActivity,
                     dept:getUserData.dept,
                     subdept:getUserData.subdept,
                     location:getUserData.location
@@ -71,6 +73,8 @@ router.post('/punchin',async (req, res,next)=> {
                     punchdate:nextday,
                     punchin:time,
                     shift:getShift,
+                    primarySkill:getUserData.primarySkill,
+                    primaryActivity:getUserData.primaryActivity,
                     dept:getUserData.dept,
                     subdept:getUserData.subdept,
                     location:getUserData.location
@@ -96,6 +100,8 @@ router.post('/punchin',async (req, res,next)=> {
                     punchdate:today,
                     punchin:time,
                     shift:getShift,
+                    primarySkill:getUserData.primarySkill,
+                    primaryActivity:getUserData.primaryActivity,
                     dept:getUserData.dept,
                     subdept:getUserData.subdept,
                     location:getUserData.location
