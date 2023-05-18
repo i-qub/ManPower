@@ -32,7 +32,7 @@ const allocationSchema = new Schema({
     },
     verified: {
         type: String,
-        default:"Yes",
+        default:"NO",
         trim:true
     },
     punchout:{
