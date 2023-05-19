@@ -2,54 +2,54 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const allocationSchema = new Schema({
-    token:{
+    token: {
         type: String,
-        trim:true
+        trim: true
     },
     name: {
         type: String,
-        trim:true
+        trim: true
     },
-    punchdate:{
+    punchdate: {
         type: String,
-        trim:true
+        trim: true
     },
     punchin: {
         type: String,
-        trim:true
+        trim: true
     },
-    dept:{
+    dept: {
         type: String,
-        trim:true
+        trim: true
     },
     subdept: {
         type: String,
-        trim:true
+        trim: true
     },
-    location:{
+    location: {
         type: String,
-        trim:true
+        trim: true
     },
     verified: {
         type: String,
-        default:"NO",
-        trim:true
+        default: "NO",
+        trim: true
     },
-    punchout:{
+    punchout: {
         type: String,
-        trim:true
+        trim: true
     },
     verifiedtime: {
         type: String,
-        trim:true
+        trim: true
     },
-    shift:{
+    shift: {
         type: String,
-        trim:true
+        trim: true
     },
     id: {
-        type:Number,
-        trim:true
+        type: Number,
+        trim: true
     },
     primaryActivity: {
         type: String,
@@ -57,9 +57,11 @@ const allocationSchema = new Schema({
     },
     primarySkill: {
         type: String,
-        default:"L0",
+        default: "L0",
         trim: true
     },
-},{ timestamps: true });
+}, {
+    timestamps: true
+});
 
 module.exports = mongoose.model('allocation', allocationSchema)

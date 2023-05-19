@@ -66,9 +66,8 @@ router.post("/getAllocationData_arpa_900", async(req, res) => {
 
 router.post("/getAllocationData_arpa_900_DragMachineOp", async(req, res) => {
     const { shift, verified } = req.body;
-    // var today =  moment(new Date()).subtract(1, "days").format("DD-MM-YYYY")
-    var today =  moment(new Date()).format("DD-MM-YYYY")
-    console.log("68",req.body)
+    //var today =  moment(new Date()).subtract(1, "days").format("DD-MM-YYYY")
+     var today =  moment(new Date()).format("DD-MM-YYYY")
     let results = await allocation.find({
         shift:shift,
         subdept:'Arpa 900',
@@ -82,9 +81,8 @@ router.post("/getAllocationData_arpa_900_DragMachineOp", async(req, res) => {
 
 router.post("/getAllocationData_arpa_900_DragMachineOpAir", async(req, res) => {
     const { shift, verified } = req.body;
-    // var today =  moment(new Date()).subtract(1, "days").format("DD-MM-YYYY")
-    var today =  moment(new Date()).format("DD-MM-YYYY")
-    console.log("88",req.body)
+   // var today =  moment(new Date()).subtract(1, "days").format("DD-MM-YYYY")
+     var today =  moment(new Date()).format("DD-MM-YYYY")
     let results = await allocation.find({
         shift:shift,
         subdept:'Arpa 900',
