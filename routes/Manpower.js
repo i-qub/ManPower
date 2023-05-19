@@ -49,7 +49,8 @@ router.post("/getAllocationData_arpa_900", async(req, res) => {
     const { shift, verified } = req.body;
     // const date = new Date();
     // const today = dateFormat(date, "dd-mm-yyyy");
-    var today =  moment(new Date()).subtract(1, "days").format("DD-MM-YYYY")
+    // var today =  moment(new Date()).subtract(1, "days").format("DD-MM-YYYY")
+    var today =  moment(new Date()).format("DD-MM-YYYY")
     // pool.query(`SELECT COUNT(*) FROM allocation WHERE shift = '${shift}' AND subdept = 'Arpa 900' AND verified = '${verified}' AND punchdate = '${today}'`, (error, results) => {
     //     if (error) { res.status(400).json(error); } res.status(200).json(results.rows);
     // });
@@ -59,15 +60,19 @@ router.post("/getAllocationData_arpa_900", async(req, res) => {
         verified:verified,
         punchdate:today
        }).countDocuments()
+       console.log("63",results)
        res.status(200).json([{count:results}]);
 });
 
 router.post("/getAllocationData_arpa_900_DragMachineOp", async(req, res) => {
     const { shift, verified } = req.body;
-    var today =  moment(new Date()).subtract(1, "days").format("DD-MM-YYYY")
+    // var today =  moment(new Date()).subtract(1, "days").format("DD-MM-YYYY")
+    var today =  moment(new Date()).format("DD-MM-YYYY")
+    console.log("68",req.body)
     let results = await allocation.find({
         shift:shift,
-        subdept:'DragMachineOp',
+        subdept:'Arpa 900',
+        primaryActivity:'DragMachineOp',
         primarySkill:"L3",
         verified:verified,
         punchdate:today
@@ -77,13 +82,18 @@ router.post("/getAllocationData_arpa_900_DragMachineOp", async(req, res) => {
 
 router.post("/getAllocationData_arpa_900_DragMachineOpAir", async(req, res) => {
     const { shift, verified } = req.body;
-    var today =  moment(new Date()).subtract(1, "days").format("DD-MM-YYYY")
+    // var today =  moment(new Date()).subtract(1, "days").format("DD-MM-YYYY")
+    var today =  moment(new Date()).format("DD-MM-YYYY")
+    console.log("88",req.body)
     let results = await allocation.find({
         shift:shift,
-        subdept:'DragMachineOpAir',
+        subdept:'Arpa 900',
+        primaryActivity:'DragMachineOpAir',
+        // primarySkill:"L3",
         verified:verified,
         punchdate:today
        }).countDocuments()
+       console.log("94",results)
        res.status(200).json([{count:results}]);
 });
 

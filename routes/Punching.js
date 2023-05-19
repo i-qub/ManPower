@@ -8,7 +8,6 @@ const punchingController = require('../controllers/punchingController')
 
 router.post('/punchin',async (req, res,next)=> {
     const data = req.body;
-    console.log("11",data)
     var token = data.RealTime.PunchLog.UserId;
     var LogTime = data.RealTime.PunchLog.LogTime;
     var tempLog = LogTime.split(" ");
@@ -38,13 +37,15 @@ router.post('/punchin',async (req, res,next)=> {
             if(data.length === 0){
                 let getUserData = await users.findOne({
                     token:token
-                }).select('name dept subdept location')
+                }).select('name dept subdept location primarySkill primaryActivity')
                 var savedata = new allocations({
                     token:token,
                     name:getUserData.name,
                     punchdate:nextday,
                     punchin:time,
                     shift:getShift,
+                    primarySkill:getUserData.primarySkill,
+                    primaryActivity:getUserData.primaryActivity,
                     dept:getUserData.dept,
                     subdept:getUserData.subdept,
                     location:getUserData.location
@@ -64,13 +65,15 @@ router.post('/punchin',async (req, res,next)=> {
             if(getCount === 0){
                 let getUserData = await users.findOne({
                     token:token
-                }).select('name dept subdept location')
+                }).select('name dept subdept location primarySkill primaryActivity')
                 var savedata = new allocations({
                     token:token,
                     name:getUserData.name,
                     punchdate:nextday,
                     punchin:time,
                     shift:getShift,
+                    primarySkill:getUserData.primarySkill,
+                    primaryActivity:getUserData.primaryActivity,
                     dept:getUserData.dept,
                     subdept:getUserData.subdept,
                     location:getUserData.location
@@ -89,13 +92,15 @@ router.post('/punchin',async (req, res,next)=> {
             if(getData.length === 0){
                 let getUserData = await users.findOne({
                     token:token
-                }).select('name dept subdept location')
+                }).select('name dept subdept location primarySkill primaryActivity')
                 var savedata = new allocations({
                     token:token,
                     name:getUserData.name,
                     punchdate:today,
                     punchin:time,
                     shift:getShift,
+                    primarySkill:getUserData.primarySkill,
+                    primaryActivity:getUserData.primaryActivity,
                     dept:getUserData.dept,
                     subdept:getUserData.subdept,
                     location:getUserData.location

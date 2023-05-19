@@ -17,7 +17,6 @@ router.post("/addEmployee", async(req, res) => {
   
     var dobformat = dateFormat(dob, "dd-mm-yyyy");
     dob = dobformat;
-  
     if (type === 'CL') {
       var date = new Date(joindate);
       date.setMonth(date.getMonth() + 6);

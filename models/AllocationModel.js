@@ -32,7 +32,7 @@ const allocationSchema = new Schema({
     },
     verified: {
         type: String,
-        default:"Yes",
+        default:"NO",
         trim:true
     },
     punchout:{
@@ -50,7 +50,16 @@ const allocationSchema = new Schema({
     id: {
         type:Number,
         trim:true
-    }
+    },
+    primaryActivity: {
+        type: String,
+        trim: true
+    },
+    primarySkill: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
 },{ timestamps: true });
 
 module.exports = mongoose.model('allocation', allocationSchema)
