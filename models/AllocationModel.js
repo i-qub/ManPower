@@ -60,6 +60,136 @@ const allocationSchema = new Schema({
         default: "L0",
         trim: true
     },
+    DragMachineOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    DragMachineOpAir: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    DragMachineCoOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    CopeMachineOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    CopeMachineCoOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    CopeMachineOpAir: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    DragMouldPaintingOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    CoreSettingOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    CoreTranferFixtureOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    BoxClosingOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    VentingOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    CopeBoxPreprationOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    ClampingOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    MoldBoxTransferOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    ClampAndPinRemovingOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    PouringCraneOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    PouringOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    KOutCraneOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    KOutCraneCoOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    KOutOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    CastingTransferOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    EmptyBoxTrasferOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    SandPlantOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    SandPlantCoOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    NewSandAddOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
+    CompactibilityCheckingOp: {
+        type: String,
+        default:"L0",
+        trim: true
+    },
 }, {
     timestamps: true
 });
