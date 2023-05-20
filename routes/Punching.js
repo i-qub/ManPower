@@ -37,7 +37,7 @@ router.post('/punchin',async (req, res,next)=> {
             if(data.length === 0){
                 let getUserData = await users.findOne({
                     token:token
-                }).select('name dept subdept location primarySkill primaryActivity')
+                })
                 var savedata = new allocations({
                     token:token,
                     name:getUserData.name,
@@ -91,7 +91,7 @@ router.post('/punchin',async (req, res,next)=> {
             if(getCount === 0){
                 let getUserData = await users.findOne({
                     token:token
-                }).select('name dept subdept location primarySkill primaryActivity')
+                })
                 var savedata = new allocations({
                     token:token,
                     name:getUserData.name,
@@ -144,7 +144,7 @@ router.post('/punchin',async (req, res,next)=> {
             if(getData.length === 0){
                 let getUserData = await users.findOne({
                     token:token
-                }).select('name dept subdept location primarySkill primaryActivity')
+                })
                 var savedata = new allocations({
                     token:token,
                     name:getUserData.name,
