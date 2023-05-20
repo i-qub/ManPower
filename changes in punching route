@@ -6,6 +6,7 @@ const allocations = require('../models/AllocationModel')
 const users = require('../models/UsersModel')
 const punchingController = require('../controllers/punchingController')
 
+
 router.post('/punchin',async (req, res,next)=> {
     const data = req.body;
     var token = data.RealTime.PunchLog.UserId;
