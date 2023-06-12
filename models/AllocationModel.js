@@ -47,6 +47,10 @@ const allocationSchema = new Schema({
         type: String,
         trim: true
     },
+    mobile1: {
+        type: String,
+        trim: true
+    },
     id: {
         type: Number,
         trim: true

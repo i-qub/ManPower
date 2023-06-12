@@ -26,7 +26,8 @@ router.post('/punchin',async (req, res,next)=> {
     else { getShift = "Odd Shift"; }
 
     var newDate = new Date(LogTime);
-    newDate.setDate(newDate.getDate() - 1);
+    // newDate.setDate(newDate.getDate() - 1);
+    newDate.setDate(newDate.getDate());
     var nextday = dateFormat(newDate, "dd-mm-yyyy");
     if (AuthToken === "auaWchYPZWWTy6EdeuGQdrYoKsnALPkl") {
         if (hour === '00') {
@@ -44,6 +45,7 @@ router.post('/punchin',async (req, res,next)=> {
                     punchdate:nextday,
                     punchin:time,
                     shift:getShift,
+                    mobile1: getUserData.mobile1,
                     primarySkill:getUserData.primarySkill,
                     primaryActivity:getUserData.primaryActivity,
                     DragMachineOp:getUserData.DragMachineOp,
@@ -98,6 +100,7 @@ router.post('/punchin',async (req, res,next)=> {
                     punchdate:nextday,
                     punchin:time,
                     shift:getShift,
+                    mobile1: getUserData.mobile1,
                     primarySkill:getUserData.primarySkill,
                     primaryActivity:getUserData.primaryActivity,
                     DragMachineOp:getUserData.DragMachineOp,
@@ -151,6 +154,7 @@ router.post('/punchin',async (req, res,next)=> {
                     punchdate:today,
                     punchin:time,
                     shift:getShift,
+                    mobile1: getUserData.mobile1,
                     primarySkill:getUserData.primarySkill,
                     primaryActivity:getUserData.primaryActivity,
                     DragMachineOp:getUserData.DragMachineOp,

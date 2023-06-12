@@ -854,4 +854,14 @@ router.post("/fetchToken", async(req, res) => {
     res.status(200).json(results)
 });
 
+router.post("/updateEmployee", async(req, res) => {
+    const token = req.body.token;
+    let results = await users.findOneAndUpdate({
+        token:token
+    },{
+        ...req.body
+    })
+    res.status(200).json(results)
+});
+
 module.exports = router;

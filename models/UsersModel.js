@@ -100,7 +100,8 @@ const userSchema = new Schema({
     },
     verified: {
         type: String,
-        trim: true
+        trim: true,
+        default:"YES"
     },
     type: {
         type: String,
@@ -141,6 +142,9 @@ const userSchema = new Schema({
     ctc: {
         type: String,
         trim: true
+    },
+    activeStatus:{
+        type:String
     },
     primaryActivity: {
         type: String,
