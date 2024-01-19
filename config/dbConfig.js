@@ -14,7 +14,7 @@ mongoose.Promise = global.Promise;
 //     // password: "65b8f6da97e202754f349ffa534ea076837cceee03705b5abb975f6c73fbe6a3",
 //     // port: 5432
 // });
-const pool = mongoose.connect('mongodb+srv://rest-api:rest-api@cluster0.uouvd.mongodb.net/ManPower?retryWrites=true&w=majority', {
+const pool = mongoose.connect('mongodb://rest-api:34eace700b79730481c17bab7e2657e1@cluster0-shard-00-00.uouvd.mongodb.net:27017,cluster0-shard-00-01.uouvd.mongodb.net:27017,cluster0-shard-00-02.uouvd.mongodb.net:27017/ManPower?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
   }).then(() => {
